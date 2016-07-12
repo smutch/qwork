@@ -10,7 +10,7 @@ However, this simple code meets my needs 99% of the time.*
 
 ## Usage
 
-    queue-work [OPTIONS] COMMAND_FILE
+    qwork [OPTIONS] COMMAND_FILE
     
     Options:
       -n, --nproc INTEGER  Number of processes to use.
@@ -23,11 +23,11 @@ However, this simple code meets my needs 99% of the time.*
 
 ``` sh
 for p in {1..10}; do echo 'echo do this' $p >>! temp.txt; done
-queue-work -n 2 temp.txt
+qwork -n 2 temp.txt
 ```
 
 ### Reading commands from stdin
 
 ``` sh
-for p in {1..10}; do echo 'echo do this' $p; done | queue-work -n 2 -
+for p in {1..10}; do echo 'echo do this' $p; done | qwork -n 2 -
 ```
