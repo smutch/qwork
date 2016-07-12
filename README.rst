@@ -14,10 +14,10 @@ However, this simple code meets my needs 99% of the time.*
 Installation
 ------------
 
-Once the code is out of alpha phase and any potential bugs have been squashed, 
-it will be uploaded to pypi.  Until then, **Qwork** can be installed using:
+Once the code is out of alpha phase and any potential bugs have been squashed 
+it will be uploaded to pypi.  Until then **Qwork** can be installed using:
 
-.. code-block::sh
+.. code-block:: sh
 
     pip install git+https://github.com/smutch/qwork.git
 
