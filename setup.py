@@ -18,11 +18,6 @@ setup(
     author="Simon Mutch",
     author_email='smutch.astro@gmail.com',
     url='https://github.com/smutch/qwork',
-    packages=[
-        'qwork',
-    ],
-    #  package_dir={'qwork':
-    #               'qwork'},
     entry_points={
         'console_scripts': [
             'qwork=qwork:queue_work'
