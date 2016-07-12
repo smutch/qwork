@@ -25,8 +25,9 @@ class Runner():
 @click.argument('command_file', type=click.File('rb'))
 @click.option('-n', '--nproc', type=int, default=cpu_count(),
               help='Number of processes to use.')
-def queue_work(command_file, nproc):
+def qwork(command_file, nproc):
     """Queue up commands to run in parallel."""
+
     print("Queuing work using %d processes...\n" % nproc)
     queue = JoinableQueue()
 
@@ -37,8 +38,10 @@ def queue_work(command_file, nproc):
         Runner(queue)
 
     queue.join()
+    queue.close()
+
     print("\n...done!")
 
 
 if __name__ == "__main__":
-    queue_work()
+    qwork()

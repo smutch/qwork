@@ -20,7 +20,7 @@ setup(
     url='https://github.com/smutch/qwork',
     entry_points={
         'console_scripts': [
-            'qwork=qwork:queue_work'
+            'qwork=qwork:qwork'
         ]
     },
     include_package_data=True,
