@@ -1,7 +1,6 @@
 Qwork
 =====
 
-
     Queue up commands to run in parallel.
 
 Sometimes you just want to run a series of independent shell commands as quickly
@@ -11,6 +10,16 @@ as possible. **Qwork** allows you do do just that as simply as possible.
 However, this simple code meets my needs 99% of the time.*
 
 * Free software: MIT license
+
+Installation
+------------
+
+Once the code is out of alpha phase and any potential bugs have been squashed, 
+it will be uploaded to pypi.  Until then, **Qwork** can be installed using:
+
+.. code-block::sh
+
+    pip install git+https://github.com/smutch/qwork.git
 
 
 Usage
