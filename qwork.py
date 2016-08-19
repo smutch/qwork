@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 
-from multiprocessing import JoinableQueue, Process, cpu_count
+from __future__ import print_function
+
+from multiprocessing import JoinableQueue, Process, cpu_count, current_process
 from subprocess import check_call
 import click
 
@@ -14,9 +16,10 @@ class Runner():
         self.proc.start()
 
     def go(self):
+        name = current_process().name
         while not self.queue.empty():
             command = self.queue.get()
-            print(command)
+            print("{} :: {}".format(name, command))
             check_call(command, shell=True)
             self.queue.task_done()
 
