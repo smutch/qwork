@@ -12,6 +12,7 @@ requirements = [
 
 setup(
     name='qwork',
+    py_modules=['qwork'],
     version='0.1',
     description="Queue up commands to run in parallel.",
     long_description=readme,
